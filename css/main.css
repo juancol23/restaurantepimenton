@@ -237,11 +237,14 @@ nav .block .navbar-default .navbar-nav > .active > a:hover:before {
   padding-top: 30px;
   position: relative;
   text-align: center;
+  
 }
 #slider .block .owl-carousel img {
   padding-right: 5px;
   border-radius: 2px;
   padding-bottom: 20px;
+  height: 220px !important;
+  margin-top: 5em;
 }
 #slider .block .owl-carousel .owl-pagination .active {
   background: #FF5333;

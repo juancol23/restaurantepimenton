@@ -1,4 +1,4 @@
-setTimeout('asd()', 1000);
+setTimeout('asd()', 100);
 
 
     function asd() {
@@ -20,9 +20,9 @@ setTimeout('asd()', 1000);
                     console.log(`${doc.id} => ${doc.data().titulo}`);
                     contenido.innerHTML += ` 
                     <div class="owl-item">
-                        <img class="img-responsive" src="${doc.data().urlImagen}"/>
-                        <p style="font-size: 1.6em">${doc.data().titulo}</p>
-                        <p style="font-size: 1em">${doc.data().sumilla}</p>
+                        <img class="img-responsive" style="height: 220px !important"  src="${doc.data().urlImagen}"/>
+                        <p style="font-size: 1.26em">${doc.data().titulo}</p>
+                        <p style="font-size: 1.2em">${doc.data().sumilla}</p>
                     </div>
                 `
                 });
