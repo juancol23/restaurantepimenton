@@ -12,9 +12,10 @@ setTimeout('asd()', 100);
         var db = firebase.firestore();
         //Leer documentos
         var contenido = document.getElementById('menuCasa');
+        var contenidoCarta = document.getElementById('menuCarta');
 
         db.collection("restaurante").orderBy('fecha', 'desc')
-            .onSnapshot((querySnapshot) => {
+            .onSnapshot((querySnapshot  ) => {
                 contenido.innerHTML = '';
                 querySnapshot.forEach((doc) => {
                     console.log(`${doc.id} => ${doc.data().titulo}`);
@@ -27,5 +28,24 @@ setTimeout('asd()', 100);
                 `
                 });
             });
+
+        db.collection("restaurante").orderBy('fecha', 'desc')
+        .onSnapshot((querySnapshot  ) => {
+            contenidoCarta.innerHTML = '';
+            querySnapshot.forEach((doc) => {
+                console.log(`${doc.id} => ${doc.data().titulo}`);
+                contenidoCarta.innerHTML += ` 
+                <li class="wow fadeInLeft"  data-wow-duration="300ms" data-wow-delay="400ms">
+                    <div class="blog-img">
+                        <img src="${doc.data().urlImagen}" style="height:200px !important" alt="blog-img">
+                    </div>
+                    <div class="content-right">
+                        <h3>${doc.data().titulo}</h3>
+                        <p>${doc.data().sumilla}</p>
+                    </div>
+                </li>
+            `
+            });
+        });
     }
 
