@@ -58,12 +58,11 @@
                             <!-- Collect the nav links, forms, and other content for toggling -->
                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                               <ul class="nav navbar-nav navbar-right" id="top-nav">
-                                <li><a href="#hero-area">Inicio</a></li>
-                                <li><a href="#about-us">Acerca de nosotros</a></li>
-                                <li><a href="#blog">Blog</a></li>
-                                <li><a href="#price">Menú</a></li>
-                                <li><a href="#subscribe">Noticias</a></li>
-                                <li><a href="#contact-us">Contactos</a></li>
+                                <li><a href="#hero-area">Especial de Casa</a></li>
+                                <li><a href="#about-us">Nuestro Menú de Pucallpa</a></li>
+                                <li><a href="#blog">MENU de la SEMANA</a></li>
+                                <li><a href="#price">Obtener Cita</a></li>
+                                <li><a href="#contact-us">contactanos</a></li>
                               </ul>
                             </div><!-- /.navbar-collapse -->
                           </div><!-- /.container-fluid -->
@@ -320,37 +319,44 @@
                             <ul>
                                 <li>
                                   <h4><i class="fa fa-phone"></i>Telefono</h4>
-                                  <p>(000) 123 456 78- (000) 123 4567 89</p>
+                                  <br>
+                                  <p>061603081</p>
                                     
                                 </li>
                                 <ul>
                                          <h4 style="color:#ff5003"><i class="fa fa-map-marker" style="color:#565656 !important"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Redes Sociales</h4>
-                                         <br>
-                                        <li>
-                                             <a href="#">
-                                                   &nbsp;&nbsp;&nbsp;&nbsp; <i class="fa fa-twitter"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                   &nbsp;&nbsp;&nbsp;&nbsp; <i class="fa fa-facebook"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                   &nbsp;&nbsp;&nbsp;&nbsp; <i class="fa fa-dribbble"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                   &nbsp;&nbsp;&nbsp;&nbsp; <i class="fa fa-behance"></i>
-                                                </a>
-                                            </li>
+                                    <br>
+                                    
+                                         <div class="col-md-12">
+                                             <div class="col-md-2" style="display: inline-block;">
+                                                    <a href="#">
+                                                        &nbsp;&nbsp;&nbsp;&nbsp; <i class="fa fa-twitter"></i>
+                                                    </a>
+                                             </div>
+                                             <div class="col-md-2" style="display: inline-block;">
+                                                    <a href="#">
+                                                        &nbsp;&nbsp;&nbsp;&nbsp; <i class="fa fa-facebook"></i>
+                                                    </a>
+                                             </div>
+                                             <div class="col-md-2" style="display: inline-block;">
+                                                    <a href="#">
+                                                        &nbsp;&nbsp;&nbsp;&nbsp; <i class="fa fa-google"></i>
+                                                    </a>
+                                             </div>
+                                             <div class="col-md-2" style="display: inline-block;">
+                                                    <a href="#">
+                                                        &nbsp;&nbsp;&nbsp;&nbsp; <i class="fa fa-youtube"></i>
+                                                    </a>
+                                                    
+                                             </div>
+                                        
+                                         </div>
                                 </ul>
                                 <li>
+                                    <br>
                                   <h4><i class="fa fa-envelope"></i>E-mail</h4>
-                                  <p>rest@gmail.com - rest@mail.ru</p>
-                                  
+                                  <br>
+                                  <p>restaurantepimenton@gmail.com</p>
                                 </li>
                             </ul>
                         </div>
@@ -397,7 +403,7 @@
                         <div class="social-media-link text-center" >
                             <h3><i class="fa fa-map-marker"></i><span> &nbsp;&nbsp;&nbsp;&nbsp;Nuestra Dirección</span></h3>
                             <br> 
-                             
+                            Av.San Martín 198 - Callería - Coronel Portillo - Ucayali
                             <iframe width="90%" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d962.4147855300909!2d-74.5293911509863!3d-8.381885929824879!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91a3bcee1a9cf12b%3A0x848c819ec540965e!2sLa+Positiva+Seguros+-+Pucallpa!5e0!3m2!1ses-419!2spe!4v1523756710954" width="600" height="290" frameborder="0" style="border:0" allowfullscreen></iframe>
                             
                         </div>
@@ -447,5 +453,19 @@
         }
 
     </script>
+
+
+
+    <script>
+        $('#scroller_').on('click', function (e) {
+           var targetSec = $(this).text();
+           $('html, body').animate({
+              scrollTop: $('#' + "scroller_").offset().top
+           }, 1000);
+        });
+      </script> -->
+
+
+
 
 </html>
