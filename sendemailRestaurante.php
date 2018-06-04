@@ -11,7 +11,6 @@ $cabeceras = 'From: RestaurantePimenton@riva.com' . "\r\n" .
     // ."Content-type: text/html; charset=utf-8"
   mail($para, 'Reserva de cita para el restaurante pimenton ',$telefono."\r\n", $cabeceras); 
   
- header("Location: /http://juanvaldemar.github.io/restaurantepimenton");
-   
+ header("Location: http://juanvaldemar.github.io/restaurantepimenton");
  
 ?>

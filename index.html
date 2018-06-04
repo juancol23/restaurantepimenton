@@ -265,10 +265,10 @@
                     <div class="block">
                         <h1 class=" heading wow fadeInUp" data-wow-duration="300ms" data-wow-delay="300ms"> Reservar <span>UNA CITA</span> con nosotros</h1>
                         <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="400ms">Ingresa tu número para ponernos en contacto contigo a la brevedad.</p>
-                        <form class="form-inline" action="https://estudiojuridicouhty.000webhostapp.com/sendemailRestaurante.php" method="post">
+                        <form name="miformulario" class="form-inline" action="https://estudiojuridicouhty.000webhostapp.com/sendemailRestaurante.php" method="post">
                             <div class="form-group">
                                 <div class="input-group">
-                                    <input type="text" name="telefono" class="form-control" id="exampleInputAmount" placeholder="Ingrese su número de telefono...">
+                                    <input type="tel" name="telefono" class="form-control" id="telefono" maxlength="9" placeholder="Ingrese su número de telefono...">
                                     <div class="input-group-addon">
                                         <button class="btn btn-default" type="submit">Obtener Cita</button>
                                     </div>
@@ -427,5 +427,24 @@
 <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase-firestore.js"></script>
 
     <script src="app.js"></script>
+
+    <script>
+        // $( "#telefono" ).keyup(function() {
+ 
+            
+        // });
+        window.addEventListener("load", function() {
+            miformulario.telefono.addEventListener("keypress", soloNumeros, false);
+            });
+
+            //Solo permite introducir numeros.
+            function soloNumeros(e){
+            var key = window.event ? e.which : e.keyCode;
+            if (key < 48 || key > 57) {
+                e.preventDefault();
+            }
+        }
+
+    </script>
 
 </html>
