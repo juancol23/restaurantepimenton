@@ -13,7 +13,8 @@ setTimeout('asd()', 100);
         //Leer documentos
         var contenido = document.getElementById('menuCasa');
         var contenidoCarta = document.getElementById('menuCarta');
-
+        var contenidoNuestroMenu = document.getElementById('contenidoNuestroMenu');
+ 
         db.collection("restaurante").orderBy('fecha', 'desc')
             .onSnapshot((querySnapshot  ) => {
                 contenido.innerHTML = '';
@@ -47,5 +48,26 @@ setTimeout('asd()', 100);
             `
             });
         });
+
+        db.collection("restaurante").orderBy('fecha', 'desc')
+        .onSnapshot((querySnapshot  ) => {
+            contenidoNuestroMenu.innerHTML = '';
+            querySnapshot.forEach((doc) => {
+                console.log(`${doc.id} => ${doc.data().titulo}`);
+                contenidoNuestroMenu.innerHTML += ` 
+                <li class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="300ms">
+                    <div class="item">
+                        <div class="item-title">
+                            <h2>${doc.data().titulo}</h2>
+                            <div class="border-bottom"></div>
+                            <span>$ 25.00</span>
+                        </div>
+                        <p>${doc.data().sumilla}</p>
+                    </div>
+                </li>
+            `
+            });
+        });
+
     }
 
