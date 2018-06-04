@@ -58,11 +58,11 @@
                             <!-- Collect the nav links, forms, and other content for toggling -->
                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                               <ul class="nav navbar-nav navbar-right" id="top-nav">
-                                <li><a href="#hero-area">Especial de Casa</a></li>
-                                <li><a href="#about-us">Nuestro Menú de Pucallpa</a></li>
-                                <li><a href="#blog">MENU de la SEMANA</a></li>
-                                <li><a href="#price">Obtener Cita</a></li>
-                                <li><a href="#contact-us">contactanos</a></li>
+                                <li><a href="#" id="sliderm">Especial de Casa</a></li>
+                                <li><a href="#" id="blogm">Nuestro Menú de Pucallpa</a></li>
+                                <li><a href="#" id="pricem">MENU de la SEMANA</a></li>
+                                <li><a href="#" id="subscribem">Obtener Cita</a></li>
+                                <li><a href="#" id="footerm">contactanos</a></li>
                               </ul>
                             </div><!-- /.navbar-collapse -->
                           </div><!-- /.container-fluid -->
@@ -87,7 +87,8 @@
     <!--
     Slider start
     ============================== -->
-    <section id="slider">
+ 
+    <section id="slider" class="sliderm">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -213,7 +214,7 @@
     <!--
     blog start
     ============================ -->
-    <section id="blog">
+    <section id="blog" class="blogm">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -232,7 +233,7 @@
     <!--
     price start
     ============================ -->
-    <section id="price">
+    <section id="price" class="pricem">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -257,7 +258,7 @@
     <!--
     subscribe start
     ============================ -->
-    <section id="subscribe">
+    <section id="subscribe" class="subscribem">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -309,7 +310,7 @@
     <!--
     footer  start
     ============================= -->
-    <section id="footer">
+    <section id="footer" class="footerm">
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
@@ -457,13 +458,32 @@
 
 
     <script>
-        $('#scroller_').on('click', function (e) {
-           var targetSec = $(this).text();
+        $('#sliderm').on('click', function (e) {
            $('html, body').animate({
-              scrollTop: $('#' + "scroller_").offset().top
+              scrollTop: $('.' + "sliderm").offset().top
            }, 1000);
         });
-      </script> -->
+        $('#blogm').on('click', function (e) {
+           $('html, body').animate({
+              scrollTop: $('.' + "blogm").offset().top
+           }, 1000);
+        });
+        $('#pricem').on('click', function (e) {
+           $('html, body').animate({
+              scrollTop: $('.' + "pricem").offset().top
+           }, 1000);
+        });
+        $('#subscribem').on('click', function (e) {
+           $('html, body').animate({
+              scrollTop: $('.' + "subscribem").offset().top
+           }, 1000);
+        });  
+        $('#footerm').on('click', function (e) {
+           $('html, body').animate({
+              scrollTop: $('.' + "footerm").offset().top
+           }, 1000);
+        });
+      </script> 
 
 
 
