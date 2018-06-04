@@ -38,7 +38,7 @@ setTimeout('asd()', 100);
                 contenidoCarta.innerHTML += ` 
                 <li class="wow fadeInLeft"  data-wow-duration="300ms" data-wow-delay="400ms">
                     <div class="blog-img">
-                        <img src="${doc.data().urlImagen}" style="height:200px !important" alt="blog-img">
+                        <img src="${doc.data().urlImagen}" style="height:220px !important" alt="blog-img">
                     </div>
                     <div class="content-right">
                         <h3>${doc.data().titulo}</h3>
