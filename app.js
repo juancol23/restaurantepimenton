@@ -15,7 +15,7 @@ setTimeout('asd()', 100);
         var contenidoCarta = document.getElementById('menuCarta');
         var contenidoNuestroMenu = document.getElementById('contenidoNuestroMenu');
  
-        db.collection("restaurante").orderBy('fecha', 'desc')
+        db.collection("restauranteDesayunos").orderBy('fecha', 'desc')
             .onSnapshot((querySnapshot  ) => {
                 contenido.innerHTML = '';
                 querySnapshot.forEach((doc) => {
@@ -30,7 +30,7 @@ setTimeout('asd()', 100);
                 });
             });
 
-        db.collection("restaurante").orderBy('fecha', 'desc')
+        db.collection("restauranteCarta").orderBy('fecha', 'desc')
         .onSnapshot((querySnapshot  ) => {
             contenidoCarta.innerHTML = '';
             querySnapshot.forEach((doc) => {
@@ -49,7 +49,7 @@ setTimeout('asd()', 100);
             });
         });
 
-        db.collection("restaurante").orderBy('fecha', 'desc')
+        db.collection("restaurantePlatos").orderBy('fecha', 'desc')
         .onSnapshot((querySnapshot  ) => {
             contenidoNuestroMenu.innerHTML = '';
             querySnapshot.forEach((doc) => {
