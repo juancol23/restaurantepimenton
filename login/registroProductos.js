@@ -109,7 +109,7 @@ var url_redi_remote = 'https://juanvaldemar.github.io/restaurantepimenton/login/
       } 
       var fecha = dd+'/'+mm+'/'+yyyy;
 
-      db.collection("restauranteCarta").add({ 
+      db.collection("contenidoProductos").add({ 
 
           titulo : titulo,
           sumilla : sumilla,
@@ -142,7 +142,7 @@ var url_redi_remote = 'https://juanvaldemar.github.io/restaurantepimenton/login/
 
   //Leer documentos
   var tabla_ = document.getElementById('tabla');
-  db.collection("restauranteCarta").onSnapshot((querySnapshot) => {
+  db.collection("contenidoProductos").onSnapshot((querySnapshot) => {
       tabla_.innerHTML = '';
       querySnapshot.forEach((doc) => {
           console.log(`${doc.id} => ${doc.data().titulo}`);
@@ -156,6 +156,7 @@ var url_redi_remote = 'https://juanvaldemar.github.io/restaurantepimenton/login/
 
           <td>${doc.data().fecha}</td>
 
+ 
           <td><button class="btn btn-danger" onclick="eliminar('${doc.id}')">Eliminar</button></td>
           <td><button class="btn btn-warning" onclick="editar('${doc.id}','${doc.data().titulo}','${doc.data().sumilla}','${doc.data().urlImagen}')">Editar</button></td>
           
@@ -166,7 +167,7 @@ var url_redi_remote = 'https://juanvaldemar.github.io/restaurantepimenton/login/
 
 //borrar documentos
 function eliminar(id){
-    db.collection("restauranteCarta").doc(id).delete().then(function() {
+    db.collection("contenidoProductos").doc(id).delete().then(function() {
         console.log("Document successfully deleted!");
         console.log("ID" +id)
     }).catch(function(error) {
@@ -185,7 +186,7 @@ function editar(id, titulo, sumilla, urlImagen){
     var boton = document.getElementById('boton');
     boton.innerHTML = 'Editar';
     boton.onclick = function(){
-        var washingtonRef = db.collection("restauranteCarta").doc(id);
+        var washingtonRef = db.collection("contenidoProductos").doc(id);
 
         var titulo = document.getElementById('titulo').value;
         var sumilla = document.getElementById('sumilla').value;

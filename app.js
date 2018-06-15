@@ -14,6 +14,7 @@ setTimeout('asd()', 100);
         var contenido = document.getElementById('menuCasa');
         var contenidoCarta = document.getElementById('menuCarta');
         var contenidoNuestroMenu = document.getElementById('contenidoNuestroMenu');
+        var contenidoProductos = document.getElementById('contenidoProductos');
  
         db.collection("restauranteDesayunos").orderBy('fecha', 'desc')
             .onSnapshot((querySnapshot  ) => {
@@ -60,7 +61,7 @@ setTimeout('asd()', 100);
                         <div class="item-title">
                             <h2>${doc.data().titulo}</h2>
                             <div class="border-bottom"></div>
-                            <span>$ 25.00</span>
+                
                         </div>
                         <p>${doc.data().sumilla}</p>
                     </div>
@@ -69,5 +70,25 @@ setTimeout('asd()', 100);
             });
         });
 
-    }
+        db.collection("contenidoProductos").orderBy('fecha', 'desc')
+        .onSnapshot((querySnapshot  ) => {
+            contenidoProductos.innerHTML = '';
+            querySnapshot.forEach((doc) => {
+                console.log(`${doc.id} => ${doc.data().titulo}`);
+                contenidoProductos.innerHTML += ` 
+                <div class="card card col-md-4 col-sm-6 col-xs-12">
+                    <img class="card-img-top img-responsive" src="${doc.data().urlImagen}" alt="Card image cap">
+                    <div class="card-body">
+                        <br>
+                        <h5 class="card-title">>${doc.data().titulo}</h5>
+                        <p class="card-text">${doc.data().sumilla}</p>
+                        <br>
+                        <a href="#" class="btn btn-primary">Comprar</a>
+                    </div>
+                </div>
+            `
+            });
+        });
 
+    }
+            // <span>$ 25.00</span>

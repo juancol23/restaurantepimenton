@@ -14,7 +14,7 @@
       // observador();
         
    var url_redi_local = 'http://localhost/restaurantepimenton/login/publicar.html';
-   var url_redi_remote = 'http://localhost/restaurantepimenton/login/publicar.html';
+   var url_redi_remote = 'https://juanvaldemar.github.io/restaurantepimenton/login/publicar.html';
 
       function cerrar_(){
           firebase.auth().signOut()
@@ -25,7 +25,7 @@
                   location.href= "http://localhost/login";
               }else{
                   console.log("Producción")
-                  location.href= "http://localhost/restaurantepimenton/login/";
+                  location.href= "https://juanvaldemar.github.io/restaurantepimenton/login/";
               }
           })
           .catch(function(error){
@@ -78,7 +78,7 @@
                 // document.getElementById("usuario").innerHTML = "Hola Anónimo";
 
                 var URLactual = window.location;
-                var url_redi = 'http://localhost/restaurantepimenton/login/login.html';
+                var url_redi = 'https://juanvaldemar.github.io/restaurantepimenton/login/login.html';
                 if (URLactual != url_redi) {
                     // location.href= url_redi;
                 }
@@ -156,7 +156,6 @@
 
               <td>${doc.data().fecha}</td>
 
-                ${doc.id}
               <td><button class="btn btn-danger" onclick="eliminar('${doc.id}')">Eliminar</button></td>
               <td><button class="btn btn-warning" onclick="editar('${doc.id}','${doc.data().titulo}','${doc.data().sumilla}','${doc.data().urlImagen}')">Editar</button></td>
               
