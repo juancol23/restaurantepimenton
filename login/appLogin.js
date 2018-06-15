@@ -36,7 +36,7 @@ function observador(){
 
 
           var url_redi_local = 'http://localhost/restaurantepimenton/login/desayuno.html';
-          var url_redi_remote = 'http://localhost/restaurantepimenton/login/desayuno.html';
+          var url_redi_remote = 'https://juanvaldemar.github.io/restaurantepimenton/login/desayuno.html';
  
          if(url_condition == "http://localhost/"){
            console.log("Test"); 
@@ -69,7 +69,7 @@ function observador(){
           // document.getElementById("usuario").innerHTML = "Hola Anónimo";
 
           var URLactual = window.location;
-          var url_redi = 'http://localhost/restaurantepimenton/login/desayuno.html';
+          var url_redi = 'https://juanvaldemar.github.io/restaurantepimenton/login/desayuno.html';
           if (URLactual != url_redi) {
               // location.href= url_redi;
           }
