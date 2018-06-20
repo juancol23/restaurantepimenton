@@ -1,12 +1,13 @@
  //configuración personal de Firebase
       
 
- firebase.initializeApp({
-    apiKey: "AIzaSyCE-n4QOuKmPQGnpLdT1svm5z5C1lobZs4",
-    authDomain: "camaleonjuridico-92ad6.firebaseapp.com",
+firebase.initializeApp({
+ 
+    apiKey: "AIzaSyBHztxYHiV6lUMtG_sIdOhKGJzgVPTelt4",
+    authDomain: "invianpush.firebaseapp.com",
+    projectId: "invianpush",
 
-    projectId: "camaleonjuridico-92ad6"
-});  
+});
        
 // Initialize Cloud Firestore through Firebase
 var db = firebase.firestore(); 

@@ -1,11 +1,12 @@
 setTimeout('asd()', 100);
 
-
     function asd() {
         firebase.initializeApp({
-            apiKey: "AIzaSyCE-n4QOuKmPQGnpLdT1svm5z5C1lobZs4",
-            authDomain: "camaleonjuridico-92ad6.firebaseapp.com",
-            projectId: "camaleonjuridico-92ad6"
+ 
+            apiKey: "AIzaSyBHztxYHiV6lUMtG_sIdOhKGJzgVPTelt4",
+            authDomain: "invianpush.firebaseapp.com",
+            projectId: "invianpush",
+
         });
 
         // Initialize Cloud Firestore through Firebase
@@ -23,7 +24,7 @@ setTimeout('asd()', 100);
                     console.log(`${doc.id} => ${doc.data().titulo}`);
                     contenido.innerHTML += ` 
                     <div class="owl-item">
-                        <img class="img-responsive" style="height: 220px !important"  src="${doc.data().urlImagen}"/>
+                        <img class="img-responsive" style="height: 220px !important;width: 305px !important;" src="${doc.data().urlImagen}"/>
                         <p style="font-size: 1.26em">${doc.data().titulo}</p>
                         <p style="font-size: 1.2em">${doc.data().sumilla}</p>
                     </div>
@@ -39,7 +40,7 @@ setTimeout('asd()', 100);
                 contenidoCarta.innerHTML += ` 
                 <li class="wow fadeInLeft"  data-wow-duration="300ms" data-wow-delay="400ms">
                     <div class="blog-img">
-                        <img src="${doc.data().urlImagen}" style="height:220px !important" alt="blog-img">
+                        <img src="${doc.data().urlImagen}" class="IA" alt="blog-img">
                     </div>
                     <div class="content-right">
                         <h3>${doc.data().titulo}</h3>
@@ -83,7 +84,6 @@ setTimeout('asd()', 100);
                         <h5 class="card-title">>${doc.data().titulo}</h5>
                         <p class="card-text">${doc.data().sumilla}</p>
                         <br>
-                        <a href="#" class="btn btn-primary">Comprar</a>
                     </div>
                 </div>
             `
@@ -92,3 +92,4 @@ setTimeout('asd()', 100);
 
     }
             // <span>$ 25.00</span>
+                        // <a href="#" class="btn btn-primary">Comprar</a>
