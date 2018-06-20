@@ -133,8 +133,11 @@ a:active {
   top: 0;
   width: 100%;
   height: 100%;
-  background: url("../images/overlay-pattern.png") #000000;
-  opacity: 0.3;
+  /*background: url("../images/overlay-pattern.png") #000000;*/
+  /*background: url("https://biotrendies.com/wp-content/uploads/2017/09/errores-habituales-desayuno-evitar.jpg");*/
+  background: url("") #000000;
+
+  opacity: 0.5;
 }
 /*--
     nav Start
@@ -286,7 +289,7 @@ nav .block .navbar-default .navbar-nav > .active > a:hover:before {
 #blog {
   padding-top: 75px;
   padding-bottom: 100px;
-  background: url("../images/blog/blog-bg.jpg");
+  background: url("https://biotrendies.com/wp-content/uploads/2017/09/errores-habituales-desayuno-evitar.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -302,7 +305,7 @@ nav .block .navbar-default .navbar-nav > .active > a:hover:before {
   width: 100%;
   height: 100%;
   background: url("../images/overlay-pattern.png") #000000;
-  opacity: 0.3;
+  opacity: 0.48;
 }
 #blog .block .heading {
   color: #fff;
@@ -496,7 +499,8 @@ nav .block .navbar-default .navbar-nav > .active > a:hover:before {
 #subscribe {
   padding: 100px 0px;
   text-align: center;
-  background: url("../images/subscribe-bg.jpg");
+/*  background: url("../images/subscribe-bg.jpg");*/
+  background: url("https://biotrendies.com/wp-content/uploads/2017/09/errores-habituales-desayuno-evitar.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;

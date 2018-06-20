@@ -81,7 +81,7 @@ setTimeout('asd()', 100);
                     <img class="card-img-top img-responsive" src="${doc.data().urlImagen}" alt="Card image cap">
                     <div class="card-body">
                         <br>
-                        <h5 class="card-title">>${doc.data().titulo}</h5>
+                        <h5 class="card-title">${doc.data().titulo}</h5>
                         <p class="card-text">${doc.data().sumilla}</p>
                         <br>
                     </div>
